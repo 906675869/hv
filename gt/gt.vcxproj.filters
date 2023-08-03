@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Driver Files">
+      <UniqueIdentifier>{8E41214B-6785-4CFE-B992-037D68949A14}</UniqueIdentifier>
+      <Extensions>inf;inv;inx;mof;mc;</Extensions>
+    </Filter>
+    <Filter Include="Source Files\hv">
+      <UniqueIdentifier>{3d04dd77-e2f0-46e4-9af6-33239971f8ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\km">
+      <UniqueIdentifier>{ea9d1a68-644c-4b13-8079-430cbfef046b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\km">
+      <UniqueIdentifier>{e5f327a4-80da-469e-80a0-bccc9ed0b40d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cm">
+      <UniqueIdentifier>{a99a04da-e9e2-46ff-b6ff-c95c827731c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\cm">
+      <UniqueIdentifier>{67327487-747e-4d76-95e6-72638afb3e19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\native">
+      <UniqueIdentifier>{7c870fc7-09f7-454c-a2c7-98aee86153ec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\ept.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\exit-handlers.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\gdt.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\hv.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\hypercalls.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\idt.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\introspection.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\logger.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\mm.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\mtrr.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\page-tables.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\segment.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\timing.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\vcpu.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\hv\vmcs.cpp">
+      <Filter>Source Files\hv</Filter>
+    </ClCompile>
+    <ClCompile Include="kmclass.cpp">
+      <Filter>Source Files\km</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Source Files\cm</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\hv\arch.asm">
+      <Filter>Source Files\hv</Filter>
+    </MASM>
+    <MASM Include="..\hv\exception-routines.asm">
+      <Filter>Source Files\hv</Filter>
+    </MASM>
+    <MASM Include="..\hv\interrupt-handlers.asm">
+      <Filter>Source Files\hv</Filter>
+    </MASM>
+    <MASM Include="..\hv\vm-exit.asm">
+      <Filter>Source Files\hv</Filter>
+    </MASM>
+    <MASM Include="..\hv\vm-launch.asm">
+      <Filter>Source Files\hv</Filter>
+    </MASM>
+    <MASM Include="..\hv\vmx.asm">
+      <Filter>Source Files\hv</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\hv\arch.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\ept.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\exception-routines.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\exit-handlers.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\gdt.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\guest-context.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\hv.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\hypercalls.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\idt.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\interrupt-handlers.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\introspection.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\logger.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\mm.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\mtrr.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\page-tables.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\segment.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\spin-lock.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\timing.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\trap-frame.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\vcpu.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\vmcs.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\hv\vmx.h">
+      <Filter>Source Files\hv</Filter>
+    </ClInclude>
+    <ClInclude Include="kmclass.h">
+      <Filter>Header Files\km</Filter>
+    </ClInclude>
+    <ClInclude Include="kmclass_common.h">
+      <Filter>Header Files\km</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Header Files\cm</Filter>
+    </ClInclude>
+    <ClInclude Include="NtStruct.h">
+      <Filter>Header Files\native</Filter>
+    </ClInclude>
+    <ClInclude Include="Ntenums.h">
+      <Filter>Header Files\native</Filter>
+    </ClInclude>
+    <ClInclude Include="tools.h">
+      <Filter>Header Files\cm</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\hv\vmx.inl">
+      <Filter>Source Files\hv</Filter>
+    </None>
+  </ItemGroup>
+</Project>

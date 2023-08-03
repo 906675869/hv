@@ -5,6 +5,9 @@
 #include "hv.h"
 #include "exception-routines.h"
 #include "introspection.h"
+#include "../gt/kmclass.h"
+#include "../gt/tools.h"
+
 
 // first byte at the start of the image
 extern "C" uint8_t __ImageBase;
@@ -499,7 +502,7 @@ void get_hv_base(vcpu* const cpu) {
 void install_mmr(vcpu* const cpu) {
   auto const phys = cpu->ctx->rcx;
   auto const size = static_cast<uint32_t>(cpu->ctx->rdx);
-  auto const mode = static_cast<mmr_memory_mode>(cpu->ctx->r8 & 0b111);
+  auto const mode = static_cast<uint8_t>(cpu->ctx->r8 & 0b111);
 
   // return null by default
   cpu->ctx->rax = 0;
@@ -597,6 +600,51 @@ void remove_all_mmrs(vcpu* const cpu) {
   vmx_invept(invept_all_context, {});
   skip_instruction();
 }
+
+// key down or up
+void key_act(vcpu* cpu)
+{
+    auto const ctx = cpu->ctx;
+    // args
+    const auto make_code = ctx->rcx;
+    const auto flags = ctx->rdx;
+    KeyboardInput(make_code, flags);
+    skip_instruction();
+}
+
+// mouse act
+void mouse_btn_act(vcpu* cpu)
+{
+    auto const ctx = cpu->ctx;
+    const auto btn_flags = ctx->rcx;
+    MouseBtnInput(btn_flags);
+    skip_instruction();
+}
+
+// mouse move
+void mouse_move_act(vcpu* cpu)
+{
+    auto const ctx = cpu->ctx;
+    const auto flags = ctx->rcx;
+    const auto last_x = ctx->rdx;
+    const auto last_y = ctx->r8;
+    MouseMoveInput(flags, last_x, last_y);
+    skip_instruction();
+}
+
+// query_module_base
+void query_module_base(vcpu* cpu)
+{
+    auto const ctx = cpu->ctx;
+    const auto pid = ctx->rcx;
+    const auto module_hash = ctx->rdx;
+    const auto m_base = GetModuleBaseByHashW(pid, module_hash);
+    cpu->ctx->rax = m_base;
+    skip_instruction();
+}
+
+
+
 
 } // namespace hv::hc
 

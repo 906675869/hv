@@ -99,9 +99,6 @@
     <ClCompile Include="idt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="mm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

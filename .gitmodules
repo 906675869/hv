@@ -1,3 +1,6 @@
 [submodule "extern/ia32-doc"]
 	path = extern/ia32-doc
 	url = https://github.com/jonomango/ia32-doc
+[submodule "ia32-doc"]
+	path = ia32-doc
+	url = https://github.com/jonomango/ia32-doc.git
