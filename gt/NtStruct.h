@@ -481,6 +481,7 @@ typedef struct _KLDR_DATA_TABLE_ENTRY {
     UNICODE_STRING FullDllName;
     UNICODE_STRING BaseDllName;
     ULONG Flags;
+<<<<<<< HEAD
 } KLDR_DATA_TABLE_ENTRY, * PKLDR_DATA_TABLE_ENTRY;
 
 
@@ -551,3 +552,6 @@ typedef PIMAGE_NT_HEADERS64                 PIMAGE_NT_HEADERS;
      FIELD_OFFSET( IMAGE_NT_HEADERS, OptionalHeader ) +                 \
      ((ntheader))->FileHeader.SizeOfOptionalHeader   \
     ))
+=======
+} KLDR_DATA_TABLE_ENTRY, * PKLDR_DATA_TABLE_ENTRY;
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c

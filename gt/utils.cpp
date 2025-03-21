@@ -48,6 +48,7 @@ ULONG_PTR GetModuleBaseByHashW(ULONG pid, UINT32 moduleHash) {
     return 0;
 }
 
+<<<<<<< HEAD
 ULONG_PTR GetModuleBase(ULONG pid, PCWSTR moduleName)
 {
     PEPROCESS process;
@@ -101,6 +102,8 @@ ULONG_PTR GetModuleBase(ULONG pid, PCWSTR moduleName)
     return 0;
 }
 
+=======
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
 
 
 NTSTATUS RtlForceDeleteFile(PUNICODE_STRING pFilePath) {
@@ -125,6 +128,7 @@ NTSTATUS RtlForceDeleteFile(PUNICODE_STRING pFilePath) {
     }
     ObCloseHandle(hFile, KernelMode);
     return Status;
+<<<<<<< HEAD
 }
 
 
@@ -231,4 +235,6 @@ NTSTATUS GetDriverTextRegion(PDRIVER_OBJECT DriverObject, AR region) {
         }
     }
     return STATUS_UNSUCCESSFUL;
+=======
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
 }

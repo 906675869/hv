@@ -30,7 +30,14 @@ enum hypercall_code : uint64_t {
   hypercall_install_mmr,
   hypercall_remove_mmr,
   hypercall_remove_all_mmrs,
+<<<<<<< HEAD
 
+=======
+  hypercall_key_act,
+  hypercall_mouse_btn_act,
+  hypercall_mouse_move_act,
+  hypercall_query_module_base
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
 
 };
 
@@ -102,6 +109,20 @@ void remove_mmr(vcpu* cpu);
 // remove every installed MMR
 void remove_all_mmrs(vcpu* cpu);
 
+<<<<<<< HEAD
+=======
+// key down/up virtual key
+void key_act(vcpu* cpu);
+
+// mouse click
+void mouse_btn_act(vcpu* cpu);
+
+// mouse move
+void mouse_move_act(vcpu* cpu);
+
+// query_module_base
+void query_module_base(vcpu* cpu);
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
 
 
 } // namespace hc

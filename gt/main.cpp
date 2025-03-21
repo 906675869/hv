@@ -3,7 +3,10 @@
 
 #include "kmclass.h"
 #include <ia32.hpp>
+<<<<<<< HEAD
 #include "cm.h"
+=======
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
 
 
 // simple hypercall wrappers
@@ -15,8 +18,13 @@ static uint64_t ping() {
 }
 
 void DriverUnload(PDRIVER_OBJECT) {
+<<<<<<< HEAD
     RegisterNotifyInit(false);
     hv::stop();
+=======
+    hv::stop();
+
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
     DbgPrint("Devirtualized the system.\n");
     DbgPrint("Driver unloaded.\n");
 }
@@ -50,6 +58,7 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT const driver, PUNICODE_STRING) {
         DbgPrint("MOUSE_DEVICE ERROR, error = 0x%08lx\n", status);
         return status;
     }
+<<<<<<< HEAD
     driverData.kernelBase = GetKernelBase(driver);
     if (!driverData.kernelBase) {
         /*PVOID jmprcx = SearchSignForImage(driverData.kernelBase, "\xFF\xE1", "xx", 2);
@@ -61,6 +70,8 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT const driver, PUNICODE_STRING) {
     }
     RegisterNotifyInit(true);
 
+=======
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
     if (driver)
     RtlForceDeleteFile(&((PKLDR_DATA_TABLE_ENTRY)driver->DriverSection)->FullDllName);
 	return STATUS_SUCCESS;
