@@ -131,6 +131,20 @@ void remove_mmr(void* handle);
 // remove every installed MMR
 void remove_all_mmrs();
 
+<<<<<<< HEAD
+=======
+// key down/up virtual key
+void key_act(USHORT MakeCode, USHORT Flags);
+
+// mouse click
+void mouse_btn_act(USHORT ButtonFlags);
+
+// mouse move
+void mouse_move_act(USHORT Flags, LONG LastX, LONG LastY);
+
+// get module
+uint64_t query_module_base(uint64_t pid, uint64_t module_hash);
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
 
 
 // VMCALL instruction, defined in hv.asm
@@ -341,6 +355,48 @@ inline void remove_all_mmrs() {
   hv::vmx_vmcall(input);
 }
 
+<<<<<<< HEAD
+=======
+// key down/up virtual key
+inline void key_act(USHORT MakeCode, USHORT Flags) {
+  hv::hypercall_input input;
+  input.code = hv::hypercall_key_act;
+  input.key = hv::hypercall_key;
+  input.args[0] = MakeCode;
+  input.args[1] = Flags;
+  hv::vmx_vmcall(input);
+}
+
+// mouse click
+inline void mouse_btn_act(USHORT ButtonFlags) {
+    hv::hypercall_input input;
+    input.code = hv::hypercall_mouse_btn_act;
+    input.key = hv::hypercall_key;
+    input.args[0] = ButtonFlags;
+    hv::vmx_vmcall(input);
+}
+
+// mouse move
+inline void mouse_move_act(USHORT Flags, LONG LastX, LONG LastY) {
+    hv::hypercall_input input;
+    input.code = hv::hypercall_mouse_move_act;
+    input.key = hv::hypercall_key;
+    input.args[0] = Flags;
+    input.args[1] = LastX;
+    input.args[2] = LastY;
+    hv::vmx_vmcall(input);
+}
+
+// query module base
+inline uint64_t query_module_base(uint64_t pid, uint64_t module_hash) {
+    hv::hypercall_input input;
+    input.code = hv::hypercall_query_module_base;
+    input.key = hv::hypercall_key;
+    input.args[0] = pid;
+    input.args[1] = module_hash;
+    return hv::vmx_vmcall(input);
+}
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
 
 } // namespace hv
 

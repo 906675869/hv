@@ -91,9 +91,12 @@
     <ClCompile Include="utils.cpp">
       <Filter>Source Files\cm</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="cm.cpp">
       <Filter>Source Files\cm</Filter>
     </ClCompile>
+=======
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
   </ItemGroup>
   <ItemGroup>
     <MASM Include="..\hv\arch.asm">
@@ -200,9 +203,12 @@
     <ClInclude Include="tools.h">
       <Filter>Header Files\cm</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="cm.h">
       <Filter>Header Files\cm</Filter>
     </ClInclude>
+=======
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
   </ItemGroup>
   <ItemGroup>
     <None Include="..\hv\vmx.inl">

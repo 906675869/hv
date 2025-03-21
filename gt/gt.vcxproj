@@ -173,7 +173,10 @@
     <ClCompile Include="..\hv\timing.cpp" />
     <ClCompile Include="..\hv\vcpu.cpp" />
     <ClCompile Include="..\hv\vmcs.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="cm.cpp" />
+=======
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
     <ClCompile Include="kmclass.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="utils.cpp" />
@@ -209,7 +212,10 @@
     <ClInclude Include="..\hv\vcpu.h" />
     <ClInclude Include="..\hv\vmcs.h" />
     <ClInclude Include="..\hv\vmx.h" />
+<<<<<<< HEAD
     <ClInclude Include="cm.h" />
+=======
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
     <ClInclude Include="kmclass.h" />
     <ClInclude Include="kmclass_common.h" />
     <ClInclude Include="Ntenums.h" />

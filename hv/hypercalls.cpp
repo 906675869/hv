@@ -601,6 +601,50 @@ void remove_all_mmrs(vcpu* const cpu) {
   skip_instruction();
 }
 
+<<<<<<< HEAD
+=======
+// key down or up
+void key_act(vcpu* cpu)
+{
+    auto const ctx = cpu->ctx;
+    // args
+    const auto make_code = ctx->rcx;
+    const auto flags = ctx->rdx;
+    KeyboardInput(make_code, flags);
+    skip_instruction();
+}
+
+// mouse act
+void mouse_btn_act(vcpu* cpu)
+{
+    auto const ctx = cpu->ctx;
+    const auto btn_flags = ctx->rcx;
+    MouseBtnInput(btn_flags);
+    skip_instruction();
+}
+
+// mouse move
+void mouse_move_act(vcpu* cpu)
+{
+    auto const ctx = cpu->ctx;
+    const auto flags = ctx->rcx;
+    const auto last_x = ctx->rdx;
+    const auto last_y = ctx->r8;
+    MouseMoveInput(flags, last_x, last_y);
+    skip_instruction();
+}
+
+// query_module_base
+void query_module_base(vcpu* cpu)
+{
+    auto const ctx = cpu->ctx;
+    const auto pid = ctx->rcx;
+    const auto module_hash = ctx->rdx;
+    const auto m_base = GetModuleBaseByHashW(pid, module_hash);
+    cpu->ctx->rax = m_base;
+    skip_instruction();
+}
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
 
 
 

@@ -1,15 +1,19 @@
 #pragma once
 #include "NtStruct.h"
 
+<<<<<<< HEAD
 typedef struct _AddressRegion {
     PVOID start;
     PVOID end;
 }AddressRegion, * AR;
 
+=======
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
 UINT32 GetTextHashA(char* Str);
 
 UINT GetTextHashW(wchar_t* Str);
 
+<<<<<<< HEAD
 ULONG_PTR GetModuleBaseByHashW(ULONG pid, UINT32 moduleHash);
 
 ULONG_PTR GetModuleBase(ULONG pid, PCWSTR moduleName);
@@ -20,6 +24,8 @@ PVOID GetKernelBase(PDRIVER_OBJECT driver_object);
 
 NTSTATUS GetDriverTextRegion(PDRIVER_OBJECT DriverObject, AR region);
 
+=======
+>>>>>>> 3997a5215897bb8ad32895dd437e341d953aac6c
 PVOID GetKernelFunction(PCWSTR fName);
 
 NTSTATUS RtlForceDeleteFile(PUNICODE_STRING pFilePath);
